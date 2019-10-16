@@ -1,0 +1,58 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/f43463a2/
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	module:Bookers2
+ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
+ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::Base$/;"	c
+ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
+ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c
+ApplicationSystemTestCase	test/application_system_test_case.rb	/^class ApplicationSystemTestCase < ActionDispatch::SystemTestCase$/;"	c
+Book	app/models/book.rb	/^class Book < ApplicationRecord$/;"	c
+BookTest	test/models/book_test.rb	/^class BookTest < ActiveSupport::TestCase$/;"	c
+Bookers2	config/application.rb	/^module Bookers2$/;"	m
+BooksController	app/controllers/books_controller.rb	/^class BooksController < ApplicationController$/;"	c
+BooksControllerTest	test/controllers/books_controller_test.rb	/^class BooksControllerTest < ActionDispatch::IntegrationTest$/;"	c
+BooksHelper	app/helpers/books_helper.rb	/^module BooksHelper$/;"	m
+Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	module:ApplicationCable
+Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	module:ApplicationCable
+CreateBooks	db/migrate/20191015082829_create_books.rb	/^class CreateBooks < ActiveRecord::Migration[5.2]$/;"	c
+CreateProfileImages	db/migrate/20191015073911_create_profile_images.rb	/^class CreateProfileImages < ActiveRecord::Migration[5.2]$/;"	c
+DeviseCreateUsers	db/migrate/20191015045502_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration[5.2]$/;"	c
+ProfileImage	app/models/profile_image.rb	/^class ProfileImage < ApplicationRecord$/;"	c
+ProfileImageTest	test/models/profile_image_test.rb	/^class ProfileImageTest < ActiveSupport::TestCase$/;"	c
+TestCase	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c	module:ActiveSupport
+The change you wanted was rejected.	public/422.html	/^      <h1>The change you wanted was rejected.<\/h1>$/;"	h
+The page you were looking for doesn't exist.	public/404.html	/^      <h1>The page you were looking for doesn't exist.<\/h1>$/;"	h
+User	app/models/user.rb	/^class User < ApplicationRecord$/;"	c
+UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+UsersControllerTest	test/controllers/users_controller_test.rb	/^class UsersControllerTest < ActionDispatch::IntegrationTest$/;"	c
+UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
+We're sorry, but something went wrong.	public/500.html	/^      <h1>We're sorry, but something went wrong.<\/h1>$/;"	h
+after_sign_in_path_for	app/controllers/application_controller.rb	/^	def after_sign_in_path_for(resource)$/;"	f	class:ApplicationController
+book_params	app/controllers/books_controller.rb	/^	def book_params$/;"	f	class:BooksController
+change	db/migrate/20191015045502_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+change	db/migrate/20191015073911_create_profile_images.rb	/^  def change$/;"	f	class:CreateProfileImages
+change	db/migrate/20191015082829_create_books.rb	/^  def change$/;"	f	class:CreateBooks
+configure_permitted_parameters	app/controllers/application_controller.rb	/^	def configure_permitted_parameters$/;"	f	class:ApplicationController
+create	app/controllers/books_controller.rb	/^	def create$/;"	f	class:BooksController
+default	config/database.yml	/^default: &default$/;"	a
+dependencies	package.json	/^  "dependencies": {}$/;"	o
+edit	app/controllers/users_controller.rb	/^  def edit$/;"	f	class:UsersController
+email_changed?	app/models/user.rb	/^  def email_changed?$/;"	f	class:User
+email_required?	app/models/user.rb	/^  def email_required?$/;"	f	class:User
+index	app/controllers/books_controller.rb	/^	def index$/;"	f	class:BooksController
+name	package.json	/^  "name": "Bookers2",$/;"	s
+new	app/controllers/books_controller.rb	/^	def new$/;"	f	class:BooksController
+private	package.json	/^  "private": true,$/;"	b
+show	app/controllers/books_controller.rb	/^	def show$/;"	f	class:BooksController
+show	app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
+update	app/controllers/books_controller.rb	/^	def update$/;"	f	class:BooksController

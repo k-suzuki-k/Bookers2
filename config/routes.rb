@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
-	root 'user#index'
+	root 'books#index'
+	#root 'users#show'
 
 	devise_for :users
+
+	resources :users, only:[:show,:edit]
+
+	resources :books
 
 end

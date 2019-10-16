@@ -1,0 +1,12 @@
+<h1>Book detail</h1>
+<table>
+	<tbody>
+		<tr>
+			<th></th>
+			<th><%= @book.title %></th>
+			<th><%= @book.body %><t/th>
+			<th><%= link_to "Edit", edit_book_path(@book) %></th>
+			<th><%= link_to "Destroy", book_path(@book), method: :delete %></th>
+		</tr>
+	</tbody>
+</table>
