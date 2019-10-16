@@ -4,6 +4,8 @@ class User < ApplicationRecord
 
   validates :name,uniqueness: true
 
+  attachment :profile_image
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
