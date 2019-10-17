@@ -1,6 +1,9 @@
 <h1>Edit</h1>
 <div>
 	<%= form_for(@user) do |f| %>
+
+	        <%= render 'layouts/error_messages', model: f.object %>
+
 		<p>Name</p>
 		<%= f.text_field :name %>
 		<p>Image</p>

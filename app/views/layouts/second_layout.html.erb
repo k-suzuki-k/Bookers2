@@ -42,15 +42,9 @@
   </div>
 
   <body>
-	  <% if flash[:notice] %>
-		  <%= flash[:notice] %>
-	  <% end %>
 
 	  <%= yield %>
 
-	  <% if user_signed_in? %>
-		  <%= render 'users/function', book:@book, user:@user %>
-	  <% end %>
   </body>
   <footer>CopyRight Infratop.inc</footer>
 </html>

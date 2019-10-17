@@ -3,10 +3,18 @@
 	<tbody>
 		<tr>
 			<th></th>
-			<th><%= @book.title %></th>
-			<th><%= @book.body %><t/th>
-			<th><%= link_to "Edit", edit_book_path(@book) %></th>
-			<th><%= link_to "Destroy", book_path(@book), method: :delete %></th>
+
+			<th><%= link_to user_path(@book_detail.user) do %>
+				<%= attachment_image_tag @book_detail.user, :profile_image, :fill, 30, 30, format:'jpeg', fallback: "no_image.jpg" %> <% end %> </th>
+
+			<th><%= @book_detail.title %></th>
+			<th><%= @book_detail.body %><t/th>
+
+			<% if @user == current_user %>
+			<th><%= link_to "Edit", edit_book_path(@book_detail) %></th>
+			<th><%= link_to "Destroy", book_path(@book_detail), method: :delete %></th>
+			<% end %>
+
 		</tr>
 	</tbody>
 </table>

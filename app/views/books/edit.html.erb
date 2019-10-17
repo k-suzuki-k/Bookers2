@@ -2,6 +2,8 @@
 
 <%= form_for(@book) do |f| %>
 
+	<%= render 'layouts/error_messages', model: f.object %>
+
 	<p>Title</p>
 	<%= f.text_field :title %>
 	<p>Opinion</p>

@@ -2,8 +2,13 @@ class User < ApplicationRecord
 
   has_many :books, dependent: :destroy
 
-  validates :name,uniqueness: true
-  #validates :name,:email, presence: true
+  validates :name,
+	     uniqueness: true,
+	     length: {in: 2..20},
+	     presence: true
+
+  validates :introduction,
+	     length: {maximum: 50}
 
   attachment :profile_image
 
