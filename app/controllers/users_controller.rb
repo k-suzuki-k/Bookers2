@@ -25,7 +25,6 @@ class UsersController < ApplicationController
 
 	  def edit
 		  @user = User.find(params[:id])
-	          render :layout => "second_layout"
 	  end
 
 	  def update
