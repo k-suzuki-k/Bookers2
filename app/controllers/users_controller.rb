@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		@user_chk = current_user
 		unless @user == @user_chk
+			#redirect_to user_path(@user_chk)
 			redirect_to user_path(@user_chk)
 		end
 	end

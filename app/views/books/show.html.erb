@@ -2,12 +2,11 @@
 <table>
 	<tbody>
 		<tr>
-			<th></th>
 
 			<th><%= link_to user_path(@book_detail.user) do %>
-				<%= attachment_image_tag @book_detail.user, :profile_image, :fill, 30, 30, format:'jpeg', fallback: "no_image.jpg" %> <% end %> </th>
+				<%= attachment_image_tag @book_detail.user, :profile_image, :fill, 30, 30, format:'jpeg', fallback: "no_image.jpg" %><br><%= @book_detail.user.name %> <% end %> </th>
 
-			<th><%= @book_detail.title %></th>
+			<th><%= link_to @book_detail.title, book_path(@book_detail) %></th>
 			<th><%= @book_detail.body %><t/th>
 
 			<% if @user == current_user %>

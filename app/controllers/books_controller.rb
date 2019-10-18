@@ -6,7 +6,7 @@ class BooksController < ApplicationController
 		@user = User.find_by(id:@book.user_id)
 		@user_chk = current_user
 		unless @user == @user_chk
-			redirect_to user_path(@user_chk)
+			redirect_to books_path
 		end
 	end
 
