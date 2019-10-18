@@ -1,25 +1,43 @@
-<div>
-	<h1>User info</h1>
-	<%= attachment_image_tag user, :profile_image, :fill, 100, 100, format:'jpeg', fallback: "no_image.jpg" %>
-	<p>user <%= user.name %></p>
-	<p>introduction <%= user.introduction %></p>
+<div class="col-xs-3">
 
-	<% if user == current_user %>
-		<%= link_to "Edit", edit_user_path(user) %>
-	<% else %>
-		<%= link_to "Edit", user_path(current_user) %>
-	<% end %>
+	<div>
+		<h1>User info</h1>
+		<%= attachment_image_tag user, :profile_image, :fill, 100, 100, format:'jpeg', fallback: "no_image.jpg" %>
 
-</div>
+		<table class="table">
+			<tbody>
+				<tr>
+					<th>name</th>
+					<th><%= user.name %></th>
+				</tr>
+				<tr>
+					<th>introduction</th>
+					<th><%= user.introduction %></th>
+				</tr>
+			</tbody>
+		</table>
 
-<div>
-	<h1>New book</h1>
-	<%= form_for(book) do |f| %>
-		<p>Title<p>
-		<%= f.text_field :title %>
-		<p>Opinion</p>
-		<%= f.text_area :body %>
-		<p><%= f.submit 'Create Book' %></p>
-	<% end %>
+		<% if user == current_user %>
+			<%= link_to(edit_user_path(user)) do %>
+				<i class="btn btn-default glyphicon glyphicon-wrench col-xs-12"></i>
+			<% end %>
+		<% else %>
+			<%= link_to (user_path(current_user)) do %>
+				<i class="btn btn-default glyphicon glyphicon-wrench col-xs-12"></i>
+			<% end %>
+		<% end %>
+	</div>
+
+	<div>
+		<h1>New book</h1>
+		<%= form_for(book) do |f| %>
+			<p>Title<p>
+			<%= f.text_field :title, class:"col-xs-12" %>
+			<p>Opinion</p>
+			<%= f.text_area :body, class:"col-xs-12" %>
+			<p><%= f.submit 'Create Book', class:"col-xs-12 btn btn-primary" %></p>
+		<% end %>
+
+	</div>
 
 </div>

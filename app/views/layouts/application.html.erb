@@ -9,47 +9,74 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <div id="slidemenu">
-	  <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
-		  <% if user_signed_in? %>
-			  <li class="">
-				  <%= link_to 'Home', user_path(current_user.id) %>
-			  </li>
-			  <li class="">
-				  <%= link_to 'Users', users_path %>
-			  </li>
-			  <li class="">
-				  <%= link_to 'Books', books_path %>
-			  </li>
-			  <li class="">
-				  <%= link_to "logout", destroy_user_session_path, method: :delete %>
-			  </li>
-		  <% else %>
-			  <li class="">
-				  <%= link_to 'Home', root_path %>
-			  </li>
-			  <li class="">
-				  <%= link_to 'About', about_index_path %>
-			  </li>
-			  <li class="">
-				  <%= link_to "sign up", new_user_registration_path %>
-			  </li>
-			  <li class="">
-				  <%= link_to "login", new_user_session_path %>
-			  </li>
-		  <% end %>
+  <body>
+
+  <header class="navbar navbar-fixed-top navbar-inverse">
+
+  <div class="container">
+
+	  <ul class="nav navbar-nav navbar-left">
+		  <span style="color:white; font-size:20px">Bookers</span>
 	  </ul>
+
+	  <ul class="nav navbar-nav navbar-right", style="margin:15px">
+			<div class="row">
+				<div class="col-xs-12">
+		  <% if user_signed_in? %>
+			  <%= link_to(user_path(current_user.id)) do %>
+			  <li class="glyphicon glyphicon-home home">Home</li>
+			  <% end %>
+			  <%= link_to(users_path) do %>
+			  <li class="glyphicon glyphicon-user users">Users</li>
+			  <% end %>
+			  <%= link_to(books_path) do %>
+			  <li class="glyphicon glyphicon-edit sign_up">Books</li>
+			  <% end %>
+			  <%= link_to(destroy_user_session_path,method: :delete) do %>
+			  <li class="glyphicon glyphicon-log-in sign_in">logout</li>
+			  <% end %>
+
+
+		  <% else %>
+			  <%= link_to(root_path) do %>
+			  <li class="glyphicon glyphicon-home home">Home</li>
+			  <% end %>
+			  <%= link_to(about_index_path) do %>
+			  <li class="glyphicon glyphicon-link link">About</li>
+			  <% end %>
+			  <%= link_to(new_user_registration_path) do %>
+			  <li class="glyphicon glyphicon-edit sign_up">Books</li>
+			  <% end %>
+			  <%= link_to(new_user_session_path) do %>
+			  <li class="glyphicon glyphicon-log-in sign_in">login</li>
+			  <% end %>
+
+		  <% end %>
+				</div>
+			</div>
+	  </ul>
+  </header>
   </div>
 
-  <body>
+  <div class="body", style="margin-top:65px">
+	  <div class="container">
 	  <% if flash[:notice] %>
 		  <%= flash[:notice] %>
 	  <% end %>
+	  </div>
 
 	  <%= yield %>
 
+  </div>
+
+  <div class="container">
+	  <div class="row">
+		  <div class="col-xs-3 col-xs-offset-9">
+			  <footer>CopyRight Infratop.inc</footer>
+		  </div>
+	  </div>
+  </div>
+  </div>
+
   </body>
-
-  <footer>CopyRight Infratop.inc</footer>
-
 </html>
